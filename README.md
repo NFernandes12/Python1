@@ -1,4 +1,4 @@
-# Python-1-
+# Python1
 
 Code I did in Python 1
 
