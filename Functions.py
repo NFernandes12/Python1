@@ -1,5 +1,6 @@
 # Nick Fernandes
 # Most of my functions compiled. 
+import math
 
 def format_num2f(num):
     newNum = format(num,',.2f')
@@ -9,7 +10,7 @@ def format_num2f(num):
 #     return '${:,.2f}'
 
 
-def input_validation1(prompt,min,datatype):
+def input_validation(prompt,min,datatype):
     amount = min -1
     while amount < min:
         try:
@@ -22,3 +23,21 @@ def input_validation1(prompt,min,datatype):
         except ValueError:
             print("Please only enter numerical data!")
     return amount 
+
+
+def getGallonsOfPaint(fFtPerGal,fSquareFt):
+   gallons = fFtPerGal / fSquareFt
+   return math.ceil(gallons)
+
+def getLaborHours(LaborHoursPerGal,totalGallons):
+  totalLaborHours = LaborHoursPerGal * totalGallons
+  return float(totalLaborHours)
+
+def getLaborCost(laborCost,laborHours):
+    totalLaborCost = laborCost * laborHours 
+    return float(totalLaborCost)
+
+def getPaintCost(totalGal,paintPrice):
+    totalPaintCost = totalGal * paintPrice
+    return float(totalPaintCost)
+
