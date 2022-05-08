@@ -18,7 +18,7 @@ def main():
     totalPaintCost = getPaintCost(totalGal,fPaintPrice)
     fTax = getSalesTax(sState)
     
-    print(f"{showCostEstimate(totalGal,totalLaborHours,totalPaintCost,totalLaborCost,fTax,totalCost,sLastName)}")
+    f"{showCostEstimate(totalGal,totalLaborHours,totalPaintCost,totalLaborCost,fTax,totalCost,sLastName)}"
 
 main()
 
