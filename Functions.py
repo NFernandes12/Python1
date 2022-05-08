@@ -41,3 +41,32 @@ def getPaintCost(totalGal,paintPrice):
     totalPaintCost = totalGal * paintPrice
     return float(totalPaintCost)
 
+def getSalesTax(sState):
+    if sState == "ct" and "connecticut" :
+       fTax = .06
+    elif sState == "ma" and "massachusetts":
+        fTax = .0625
+    elif sState == "me" and "maine":
+        fTax = .085
+    elif sState == "nh" and "new hampshire":
+        fTax = 0
+    elif sState == "ri" and "rhode island":
+        fTax = .07
+    elif sState == "vt" and "vermont":
+        fTax = .06
+    else:
+        fTax = 0
+    return fTax
+    
+def showCostEstimate(totalGal,totalLaborHours,totalPaintCost,totalLaborCost,fTax,totalCost,sLastName):
+    taxAdd = (totalLaborCost + totalPaintCost) * fTax
+    totalCost = totalLaborCost + totalPaintCost + taxAdd
+    print(f"Gallons of paint: {totalGal}\nHours of labor: {totalLaborHours}\nPaint Charges: ${totalPaintCost:,.2f}\
+        \nLabor Charges: ${totalLaborCost:,.2f}\nTax: ${taxAdd:,.2f}\nTotal Cost: ${totalCost:,.2f}\
+        \nFile: {sLastName}_PaintJobOutput.txt was created.") 
+        
+    outfile = open(f"{sLastName}_PaintJobOutput.txt", 'w')
+    outfile.write(f"Gallons of paint: {totalGal}\nHours of labor: {totalLaborHours}\nPaint Charges: ${totalPaintCost:,.2f}\
+        \nLabor Charges: ${totalLaborCost:,.2f}\nTax: ${taxAdd:,.2f}\nTotal Cost: ${totalCost:,.2f}")
+    outfile.close
+
