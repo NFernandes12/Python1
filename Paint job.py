@@ -21,20 +21,3 @@ def main():
     f"{showCostEstimate(totalGal,totalLaborHours,totalPaintCost,totalLaborCost,fTax,totalCost,sLastName)}"
 
 main()
-
-
-
-
-
-
-
-
-
-    # fPaintPrice = 26.75
-    # fHoursPerGal = 8
-    # fLaborCosts = 35
-    # fSquareFt = 550
-    # fFtPerGal = 112
-    # totalCost = 0
-    # sState = "ri".lower()
-    # sLastName = "Candido"
