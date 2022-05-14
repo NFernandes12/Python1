@@ -42,17 +42,17 @@ def getPaintCost(totalGal,paintPrice):
     return float(totalPaintCost)
 
 def getSalesTax(sState):
-    if sState == "ct" and "connecticut" :
+    if sState == "ct" or "connecticut" :
        fTax = .06
-    elif sState == "ma" and "massachusetts":
+    elif sState == "ma" or "massachusetts":
         fTax = .0625
-    elif sState == "me" and "maine":
+    elif sState == "me" or "maine":
         fTax = .085
-    elif sState == "nh" and "new hampshire":
+    elif sState == "nh" or "new hampshire":
         fTax = 0
-    elif sState == "ri" and "rhode island":
+    elif sState == "ri" or "rhode island":
         fTax = .07
-    elif sState == "vt" and "vermont":
+    elif sState == "vt" or "vermont":
         fTax = .06
     else:
         fTax = 0
